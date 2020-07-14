@@ -58,6 +58,8 @@ main > article {
     width: 310px;
     text-align: center; 
     display: inline-block;
+    vertical-align: top;
+    height: 600px;
 }
 
 main > article > img {
