@@ -28,6 +28,10 @@ function askPreference() {
     var preference = prompt('Are you a Casual Rider or a Racer?');
     var response;
 
+    while (preference !== 'Casual Rider' && preference !== 'Racer'){
+        preference = prompt('Please answer exactly! Are you a Casual Rider or a Racer?')
+    }
+
     if (preference === 'Casual Rider') {
         response = 'Great, Bikes are Cool!';
     } else if (preference === 'Racer') {
