@@ -44,6 +44,41 @@ function askPreference() {
 
 }
 
+function getStarCount(){
+    var starCount = prompt('How many stars would you rate your last ride? 1 to 5.  ');
+    
+    while (isNaN(starCount) || starCount === ''){
+      starCount = prompt('PLEASE enter a number!  How would you rate that ride?');
+    }
+    return starCount
+  }
+  
+  //example conditional statement - evaluates to false becasue one false ejects from conditional
+  // ((500 * 2 === 1000) && (false && true) && true)
+  
+  function showOrder(){
+    var result = '';
+    var itemType = askPreference();
+    var total = getCount();
+  
+    for (var i = 0; i < total; i++){
+      result = result + '<p>' + itemType + '</p>';
+    }
+  
+    return document.write(result);
+  }
+  
+  function showRating(){
+    var result = '';
+    var starCount = getStarCount();
+  
+    for (var i = 0; i < starCount; i++){
+      result = result + '<p><img src="images/star.png"></p>';
+    }
+  
+    return document.write(result);
+  }
+
 //Third Function//
 
 function addContent() {
@@ -68,3 +103,4 @@ function buildBike(bikeType, barType, tireType ) {
     var message = 'I want a ' + bikeType + 'bike with ' + barType + 'bars ' + tireType + 'tires.'
     return message;
 }
+
